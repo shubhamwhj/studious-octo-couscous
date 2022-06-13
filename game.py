@@ -110,10 +110,7 @@ def gameplay(door_rect = door_rect, win_surf = win_surf):
             if(player_rect.colliderect(door_rect)):
                 screen.blit(win_surf[0],(220,100))
                 img_width = int(player_surf.get_width() * 0.99)
-                img_height = int(player_surf.get_height() * 0.5)
-                print("old"+str(player_surf.get_height()))
-                #player_surf = scaleImages([player_surf], img_width,img_height)
-                player_surf=pygame.transform.scale(player_surf, (img_width,img_height))
-                print("new"+str(player_surf.get_height()))
+                img_height = int(player_surf.get_height() * 0.99)
+                player_surf = scaleImages([player_surf], img_width,img_height)
     except:
         pass
